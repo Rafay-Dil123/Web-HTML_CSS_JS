@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="jobApplicationForm">
+      <h2>Job Application Form</h2>
+      <!-- Personal Information -->
+      <h3>Personal Information</h3>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        placeholder="First Name"
+        required
+      />
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        placeholder="Last Name"
+        required
+      />
+      <input
+        type="tel"
+        id="phoneNumber"
+        name="phoneNumber"
+        placeholder="Phone Number"
+        required
+      />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email Address"
+        required
+      />
+      <input
+        type="text"
+        id="street"
+        name="street"
+        placeholder="Street Address"
+        required
+      />
+      <input type="text" id="city" name="city" placeholder="City" required />
+      <input type="text" id="state" name="state" placeholder="State" required />
+      <input
+        type="text"
+        id="zipCode"
+        name="zipCode"
+        placeholder="ZIP Code"
+        required
+      />
+      <!-- Resume and Cover Letter -->
+      <h3>Resume and Cover Letter</h3>
+      <input
+        type="file"
+        id="resume"
+        name="resume"
+        accept=".pdf,.doc,.docx"
+        required
+      />
+      <textarea
+        id="coverLetter"
+        name="coverLetter"
+        rows="4"
+        placeholder="Cover Letter"
+      ></textarea>
+      <!-- Education -->
+      <h3>Education</h3>
+      <select id="educationLevel" name="educationLevel" required>
+        <option value="">Select Education Level</option>
+        <option value="High School">High School</option>
+        <option value="Bachelor's Degree">Bachelor's Degree</option>
+        <option value="Master's Degree">Master's Degree</option>
+        <option value="PhD">PhD</option>
+      </select>
+      <input
+        type="text"
+        id="school"
+        name="school"
+        placeholder="School/University"
+        required
+      />
+      <input
+        type="text"
+        id="major"
+        name="major"
+        placeholder="Major/Area of Study"
+        required
+      />
+      <input
+        type="number"
+        id="graduationYear"
+        name="graduationYear"
+        placeholder="Graduation Year"
+        min="2024"
+        max="2028"
+        required
+      />
+      <!-- Employment History -->
+      <h3>Employment History</h3>
+      <input
+        type="text"
+        id="jobTitle"
+        name="jobTitle"
+        placeholder="Previous Job Title"
+        required
+      />
+      <input
+        type="text"
+        id="company"
+        name="company"
+        placeholder="Company Name"
+        required
+      />
+      <input
+        type="text"
+        id="employmentDates"
+        name="employmentDates"
+        placeholder="Employment Dates (e.g., MM/YYYY - MM/YYYY)"
+        required
+      />
+      <textarea
+        id="jobResponsibilities"
+        name="jobResponsibilities"
+        rows="4"
+        placeholder="Job Responsibilities"
+      ></textarea>
+      <!-- Skills -->
+      <h3>Skills</h3>
+      <textarea
+        id="skills"
+        name="skills"
+        rows="4"
+        placeholder="Relevant Skills and Certifications"
+      ></textarea>
+      <!-- Availability -->
+      <h3>Availability</h3>
+      <input
+        type="date"
+        id="startDate"
+        name="startDate"
+        placeholder="Start Date"
+        required
+      />
+      <input
+        type="text"
+        id="workSchedule"
+        name="workSchedule"
+        placeholder="Preferred Work Schedule"
+        required
+      />
+      <input type="checkbox" id="relocate" name="relocate" />
+      <label for="relocate">Willing to Relocate</label>
+      <!-- References -->
+      <h3>References</h3>
+      <input
+        type="text"
+        id="referenceName"
+        name="referenceName"
+        placeholder="Reference Name"
+        required
+      />
+      <input
+        type="tel"
+        id="referenceContact"
+        name="referenceContact"
+        placeholder="Reference Contact Information"
+        required
+      />
+      <input
+        type="text"
+        id="relationship"
+        name="relationship"
+        placeholder="Relationship to Applicant"
+        required
+      />
+      <!-- Additional Questions -->
+      <h3>Additional Questions</h3>
+      <textarea
+        id="whyWorkHere"
+        name="whyWorkHere"
+        rows="4"
+        placeholder="Why do you want to work for this company?"
+        required
+      ></textarea>
+      <!-- Consent and Agreement -->
+      <h3>Consent and Agreement</h3>
+      <input type="checkbox" id="agreeTerms" name="agreeTerms" required />
+      <label for="agreeTerms">I agree to the terms and conditions</label><br />
+      <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required />
+      <label for="privacyPolicy">I acknowledge the privacy policy</label><br />
+      <input type="submit" value="Submit Application" />
+    </form>
+
+    <button id="viewAsTable">View Applications as Table</button>
+    <table id="table1" style="display: none"></table>
+
+    <script src="script.js"></script>
+  </body>
+</html>

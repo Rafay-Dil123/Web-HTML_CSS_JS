@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            color: #007bff;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"],
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover,
+        button:hover {
+            background-color: #0056b3;
+        }
+        .personalinformation,
+        .resume,
+        .education {
+            margin-bottom: 30px;
+        }
+        .resume textarea {
+            resize: vertical;
+        }
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .error {
+            color: red;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="personalinformation">
+        <label for="Fullname">Full name:</label>
+        <input type="text" id="fullname">
+        <label for="Lastname">Last name:</label>
+        <input type="text" id="Lastname">
+        <label for="PhoneNumber">Phone Number:</label>
+        <input type="tel" id="PhoneNumber">
+        <label for="Email">Email:</label>
+        <input type="email" id="Email">
+    </div>
+
+    <div class="resume">
+        <label for="resume1"></label>
+        <input type="file" id="resume1"   accept="image/*,.pdf" />
+
+        <textarea name="" id="" cols="30" rows="10">Cover Letter</textarea>
+
+    </div>
+
+    <div class="education">
+        <label for="highesteducation">Highest Education attained:</label>
+        <input type="text" id="highesteducation">
+        <label for="University">Name of University:</label>
+        <input type="text" id="University">
+        <label for="Major">Major:</label>
+        <input type="text" id="Major">
+        <label for="Graduation">Graduation Year:</label>
+        <input type="number" id="Graduation"   placeholder="YYYY" min="2024" max="2028">
+    </div>
+
+    <h3>Employment History</h3>
+    <input type="text" id="jobTitle" name="jobTitle" placeholder="Previous Job Title" required>
+    <input type="text" id="company" name="company" placeholder="Company Name" required>
+    <input type="text" id="employmentDates" name="employmentDates" placeholder="Employment Dates (e.g., MM/YYYY - MM/YYYY)" required>
+    <textarea id="jobResponsibilities" name="jobResponsibilities" rows="4" placeholder="Job Responsibilities"></textarea>
+    <!-- Skills -->
+    <h3>Skills</h3>
+    <textarea id="skills" name="skills" rows="4" placeholder="Relevant Skills and Certifications"></textarea>
+    <!-- Availability -->
+    <h3>Availability</h3>
+    <input type="date" id="startDate" name="startDate" placeholder="Start Date" required>
+    <input type="text" id="workSchedule" name="workSchedule" placeholder="Preferred Work Schedule" required>
+    <input type="checkbox" id="relocate" name="relocate">
+    <label for="relocate">Willing to Relocate</label>
+    <!-- References -->
+    <h3>References</h3>
+    <input type="text" id="referenceName" name="referenceName" placeholder="Reference Name" required>
+    <input type="tel" id="referenceContact" name="referenceContact" placeholder="Reference Contact Information" required>
+    <input type="text" id="relationship" name="relationship" placeholder="Relationship to Applicant" required>
+    <!-- Additional Questions -->
+    <h3>Additional Questions</h3>
+    <textarea id="whyWorkHere" name="whyWorkHere" rows="4" placeholder="Why do you want to work for this company?" required></textarea>
+    <!-- Consent and Agreement -->
+    <h3>Consent and Agreement</h3>
+    <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+    <label for="agreeTerms">I agree to the terms and conditions</label><br>
+    <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+    <label for="privacyPolicy">I acknowledge the privacy policy</label><br>
+    <input type="submit" value="Submit Application">
+
+    <button>Submit</button>
+    <button>View Application as </button>
+    <script src="script.js"></script>
+
+
+    <table id="table1" style="display: none;">
+    </table>
+</body>
+</html>

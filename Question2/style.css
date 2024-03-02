@@ -1,0 +1,159 @@
+body
+{
+    background-color: #e9ecf2
+}
+
+.navb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #e9ecf2; /* Light gray background color */
+    cursor: pointer;
+}
+
+.navb .heading {
+    font-size: 1.5rem; /* Adjust font size as needed */
+}
+
+.navb .end {
+    display: flex;
+    align-items: center;
+}
+
+.navb input[type="text"] {
+    padding: 5px 10px;
+    border: 1px solid #524e4e;
+    fill: #34a8ca;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 120px;
+}
+
+.navb ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navb ul li {
+    display: inline-block;
+    margin-left: 10px; 
+    font-size: 1rem; 
+}
+
+.nav2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(247, 245, 245);
+    border: 1px solid white;
+    height: 40px;
+}
+
+.nav3{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(247, 245, 245);
+    border: 1px solid white;
+    height: 40px;
+}
+.nav3 select {
+    padding: 8px 12px; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 200px;
+    cursor: pointer;
+}
+
+.nav3 select {
+    padding: 8px 12px; 
+    font-size: 16px; 
+    border-radius: 4px; 
+    background-color: #fff; 
+    width: 200px; 
+    cursor: pointer; 
+}
+
+/* Style the options */
+.nav3 select option {
+    padding: 8px 12px; /* Add padding to the options */
+}
+
+.parttwo{
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1{
+    font-size: 4.625rem;
+    line-height: 5.125rem;
+   color: rgb(253, 122, 104);
+
+}
+.heading{
+    font-family: Museo,Helvetica Neue,Helvetica,Arial,sans-serif;
+    width: 550px;
+  
+}
+p{
+    font-weight: 500;
+    
+}
+
+.carousel {
+    height: 321px;
+    width: 648px;
+}
+.carousel-item img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .navbar{
+        display: none;
+    }
+    .nav3{
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .navbar{
+        display: block;
+    }
+    .navb {
+        flex-direction: column; 
+        align-items: stretch;
+    }
+
+    .navb .end {
+        display: none; 
+    }
+
+    .nav2 {
+
+        display: none ;
+    }
+
+    .carousel{
+        position: relative;
+        top: 50px;
+    }
+    
+    
+}
